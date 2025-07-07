@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <style>
+        html, body {
+          margin: 0;
+          color: white;
+          background-color: black;
+        }
+        html {
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          height: 100%;
+        }
+
+        body {
+          overflow: hidden;
+          /* height: inherit; */
+        }
+
+        h3 {
+          left: 50%;
+          transform: translateX(-50%);
+          letter-spacing: 1px;
+          position: absolute;
+          margin: 5px;
+          top: 10px;
+          z-index: 1000;
+        }
+
+        button {
+          width: 80px;
+          padding: 5px 10px;
+          border: white 1px solid;
+          border-radius: 5px;
+          background-color: rgb(66, 66, 66);
+          color: white;
+          cursor: pointer;
+        }
+
+        .controls{
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          z-index: 1000;
+        }
+    </style>
+    <h3>Rock, Paper, Scissors simulation</h3>
+    <div class="controls">
+      <div>controls:</div>
+      <div>
+        <button id="pause">pause</button>
+        <button id="start">start</button>
+      </div>
+      <div>
+        <label for="input">number of each:</label>
+        <input type="number" required id="input" value="3" min="1" max="20">
+      </div>
+      
+      <div class="stats">
+        <div id="rocks">rocks: 0</div>
+        <div id="paper">papers: 0</div>
+        <div id="scissors">scissors: 0</div>
+      </div>
+      
+    </div>
+    
+
+    <canvas></canvas>
+    
+    <script src="rps.js"></script>
+</body>
+</html>
